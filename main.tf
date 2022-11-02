@@ -17,7 +17,7 @@ resource "aws_vpc" "Ron-Vaknin-dev-vpc" {
   }
 }
 resource "aws_subnet" "Ron_Vaknin-k8s-subnet" {
-  vpc_id     = "vpc-019fc11d376c3ad47"
+  vpc_id     = aws_vpc.Ron-Vaknin-dev-vpc.id
   cidr_block = "10.0.0.0/27"
 
  tags = {
